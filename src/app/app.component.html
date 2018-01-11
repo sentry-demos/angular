@@ -1,9 +1,7 @@
 <br><br><br>
 
 <h1>Sentry.io -  Sample Error Page</h1>
-<script>
-  decodeURIComponent('%');
-</script>
+
 
 <br><br>
 <div class="center">
@@ -13,6 +11,15 @@
         <td class="error" (click)="error()">
             URI malformed
         </td>
-        </tr>
+    </tr>
+    <tr>
+        <td class="error" (click)="undefinedMethod()">
+            Undefined Method
+        </td>
+    </tr>
       </table>  
 </div>
+
+<script>
+    undfinedMethod();
+</script>

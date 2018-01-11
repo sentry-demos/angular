@@ -13,10 +13,15 @@ export class AppComponent {
   }
   error(){
     Raven.setUserContext({
-      email: "angluar_demo@sentry.io"
+      email: "angluar@demo.com"
     })
-    console.log("ERRRRRRRROR");
     decodeURIComponent('%'); 
-
   } 
+  undefinedMethod(){
+    Raven.setUserContext({
+      email: "angluar@demo.com"
+    })
+    undefined(); 
+  } 
+
 }
