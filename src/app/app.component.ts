@@ -11,10 +11,7 @@ export class AppComponent {
     console.log(value)
   
   }
-  error(){
-    Raven.setUserContext({
-      email: "angluar@demo.com"
-    })
+  malformed(){
     decodeURIComponent('%'); 
   } 
   undefinedMethod(){
