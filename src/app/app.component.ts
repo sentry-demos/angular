@@ -9,16 +9,16 @@ import * as Raven from 'raven-js';
 export class AppComponent {
   onSubmit(value:any){
     console.log(value)
-  
+
   }
   malformed(){
-    decodeURIComponent('%'); 
-  } 
+    decodeURIComponent('%');
+  }
   undefinedMethod(){
     Raven.setUserContext({
       email: "angluar@demo.com"
     })
-    undefined(); 
-  } 
+    undefined();
+  }
 
 }

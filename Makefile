@@ -1,13 +1,13 @@
 # Must have `sentry-cli` installed globally
-# Following env variables have to be set or passed in:
+# Following variable must be passed in
 #  SENTRY_AUTH_TOKEN
-#  or have it set as environment variable
 
 SENTRY_ORG=testorg-az
 SENTRY_PROJECT=angular
 VERSION=`sentry-cli releases propose-version`
+PREFIX=dist
 
-setup_release: create_release associate_commits
+setup_release: create_release associate_commits upload_sourcemaps
 
 create_release:
 	sentry-cli releases -o $(SENTRY_ORG) new -p $(SENTRY_PROJECT) $(VERSION)
@@ -15,3 +15,6 @@ create_release:
 associate_commits:
 	sentry-cli releases -o $(SENTRY_ORG) -p $(SENTRY_PROJECT) set-commits --auto $(VERSION)
 
+upload_sourcemaps:
+	sentry-cli releases -o $(SENTRY_ORG) -p $(SENTRY_PROJECT) files \
+		$(VERSION) upload-sourcemaps --url-prefix "~/" --rewrite --validate $(PREFIX)
