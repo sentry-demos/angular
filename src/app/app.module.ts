@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 Raven
   .config('https://60443a2c0a0c45599b1387046605bc88@sentry.io/269722', {
-    release : '1f89bbc1436d314c0e0a4eb5fd736f15a5580d1d'
+    release: '944abc3cb792a50bd1dd69010e1ccbcb55a0d09f'
   })
   .install();
 

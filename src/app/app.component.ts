@@ -18,8 +18,7 @@ export class AppComponent {
     Raven.setUserContext({
       email: "angluar@demo.com"
     })
-    var x = [];
-    x[33].abc();
+    undefined();
   }
 
 }
