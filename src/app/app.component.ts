@@ -13,7 +13,7 @@ export class AppComponent {
     // debugger;
   }
 
-  handleSubmit(val) {
+  handleSubmit() {
     Raven.setUserContext({email: this.textValue });
   }
   onSubmit(value: any) {

@@ -8,14 +8,14 @@
         <div class="center">
             <form>
                 <div class="form-group">
-                    <input #textbox type="text" [(ngModel)]="textValue" type="email" class="form-control" [ngModelOptions]="{standalone: true}" placeholder="Enter email">
+                    <input type="text" [(ngModel)]="textValue" type="email" class="form-control" [ngModelOptions]="{standalone: true}" placeholder="Enter email">
                 </div>
                 <button type="submit" (click)="this.handleSubmit()" class="btn btn-primary">Submit</button>
             </form>
         </div>
 
 
-        <ul class="center list-group" (click)="myStyle={'color':'blue'}">
+        <ul class="center list-group">
             <li class="list-group-item list-group-item-danger">
                 <h3>ERRORS</h3>
             </li>
