@@ -5,8 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 Raven
-  .config('https://60443a2c0a0c45599b1387046605bc88@sentry.io/269722', {
-    release: '944abc3cb792a50bd1dd69010e1ccbcb55a0d09f'
+  .config('https://6dd6b79934654822b631951be27ec0e1@sentry.io/1190123', {
+    release: "a02a4d32649ef30e1a4866419656f145bf65aa05"
   })
   .install();
 
