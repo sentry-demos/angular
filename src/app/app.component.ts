@@ -8,13 +8,20 @@ import * as Raven from 'raven-js';
 })
 export class AppComponent {
   textValue = '';
+  color = 'black';
+  currentUser = '';
 
-  showColor(ex) {
-    // debugger;
+  changeColor() {
+    var that = this;
+    this.color = 'black';
+    setTimeout(() => {
+      that.color = 'red'
+    }, 3000);
   }
 
   handleSubmit() {
-    Raven.setUserContext({email: this.textValue });
+    this.currentUser = this.textValue;
+    Raven.setUserContext({email: this.currentUser });
   }
   onSubmit(value: any) {
     console.log(value)
