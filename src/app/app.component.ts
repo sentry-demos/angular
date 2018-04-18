@@ -7,25 +7,23 @@ import * as Raven from 'raven-js';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  textValue = '';
   color = 'black';
+  textValue = '';
   currentUser = '';
 
   changeColor() {
     var that = this;
-    this.color = 'black';
+    this.color = 'red';
     setTimeout(() => {
-      that.color = 'red'
-    }, 3000);
+      that.color = 'black'
+    }, 1500);
   }
 
   handleSubmit() {
     this.currentUser = this.textValue;
     Raven.setUserContext({email: this.currentUser });
   }
-  onSubmit(value: any) {
-    console.log(value)
-  }
+
   malformed() {
     decodeURIComponent('%');
   }
@@ -33,7 +31,7 @@ export class AppComponent {
   // ERRORS
   notAFunctionError() {
     var someArray = [{ func: function () {}}];
-    someArray[0].func();
+    someArray[1].func();
   }
 
   uriError() {
