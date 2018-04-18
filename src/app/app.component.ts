@@ -31,7 +31,7 @@ export class AppComponent {
   // ERRORS
   notAFunctionError() {
     var someArray = [{ func: function () {}}];
-    someArray[0].func();
+    someArray[1].func();
   }
 
   uriError() {
