@@ -32,37 +32,21 @@ export class AppComponent {
 
   // ERRORS
   notAFunctionError() {
-    var obj = {
-      validFunction: function () {}
-    };
-    obj.validFunction();
+    var someArray = [{ func: function () {}}];
+    someArray[0].func();
   }
 
   uriError() {
     decodeURIComponent('%');
   }
 
-  // typeError() {
-  //   null.f();
-  // }
-
   syntaxError() {
     eval('foo bar');
   }
 
-  // referenceError() {
-  //   var a = undefinedVariable;
-  // }
-
   rangeError() {
     throw new RangeError('Parameter must be between 1 and 100');
   }
-
-  // evalError() {
-  //   setTimeout(() => {
-  //     throw new EvalError('Hello', 'someFile.js', 10);
-  //   }, 1000);
-  // }
   // ERRORS (end)
 
 }
