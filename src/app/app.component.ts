@@ -7,18 +7,44 @@ import * as Raven from 'raven-js';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  onSubmit(value:any){
-    console.log(value)
+  color = 'black';
+  textValue = '';
+  currentUser = '';
 
+  changeColor() {
+    var that = this;
+    this.color = 'red';
+    setTimeout(() => {
+      that.color = 'black'
+    }, 1500);
   }
-  malformed(){
+
+  handleSubmit() {
+    this.currentUser = this.textValue;
+    Raven.setUserContext({email: this.currentUser });
+  }
+
+  malformed() {
     decodeURIComponent('%');
   }
-  undefinedMethod(){
-    Raven.setUserContext({
-      email: "angluar@demo.com"
-    })
-    undefined();
+
+  // ERRORS
+  notAFunctionError() {
+    var someArray = [{ func: function () {}}];
+    someArray[1].func();
   }
+
+  uriError() {
+    decodeURIComponent('%');
+  }
+
+  syntaxError() {
+    eval('foo bar');
+  }
+
+  rangeError() {
+    throw new RangeError('Parameter must be between 1 and 100');
+  }
+  // ERRORS (end)
 
 }

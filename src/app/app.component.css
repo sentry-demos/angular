@@ -23,13 +23,8 @@
     font-size: large;
 }
 
-h1 {color: #317eac;}
-
-
 h3 {
-    font: bold 25px/1.5 Helvetica, Verdana, sans-serif;
-    color: #317eac;
-    
+    font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
 }
 
 li img {
@@ -63,16 +58,14 @@ li:hover {
     float: right;
 }
 
-.form-control {
-    width: 50%;
-    padding: 10px;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    height: 100%
 }
 
-.error {
-    color: #317eac;
-    margin: auto;
-    width: 900px;
-    padding: 10px 15px;
-    border: 1px solid #dddddd;
-    font: bold 25px/1.5 Helvetica, Verdana, sans-serif;
+#root {
+    height: 100%;
 }

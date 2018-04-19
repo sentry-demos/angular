@@ -3,7 +3,7 @@
 #  SENTRY_AUTH_TOKEN
 
 SENTRY_ORG=testorg-az
-SENTRY_PROJECT=angular
+SENTRY_PROJECT=ng-demo
 VERSION=`sentry-cli releases propose-version`
 PREFIX=dist
 
@@ -18,3 +18,6 @@ associate_commits:
 upload_sourcemaps:
 	sentry-cli releases -o $(SENTRY_ORG) -p $(SENTRY_PROJECT) files \
 		$(VERSION) upload-sourcemaps --url-prefix "~/" --rewrite --validate $(PREFIX)
+
+reference_release:
+	sed -i -e "s/release: .*/\release: \"${VERSION}\"/g" src/app/app.module.ts
