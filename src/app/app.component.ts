@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import * as Raven from 'raven-js';
+import * as Sentry from "@sentry/browser";
 
 @Component({
   selector: 'app-root',
@@ -21,7 +21,9 @@ export class AppComponent {
 
   handleSubmit() {
     this.currentUser = this.textValue;
-    Raven.setUserContext({email: this.currentUser });
+    Sentry.configureScope(scope => {
+      scope.setUser({email: this.currentUser});
+    });
   }
 
   malformed() {
