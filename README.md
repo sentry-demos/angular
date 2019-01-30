@@ -1,3 +1,7 @@
+# Sentry + Angular
+
+See https://docs.sentry.io/platforms/javascript/angular/
+
 # Angular
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
