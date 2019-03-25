@@ -8,7 +8,7 @@ import * as Sentry from "@sentry/browser";
 
 Sentry.init({
   dsn: "https://60443a2c0a0c45599b1387046605bc88@sentry.io/269722",
-  release: "a2afab974a383f395cf6c92cdebbe97fd5770aeb"
+  release: "b6d7c8d5e2d0ca00c65090c8761ca07cefd95f12"
 });
 
 export class SentryErrorHandler implements ErrorHandler {
