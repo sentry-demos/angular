@@ -1,20 +1,27 @@
-# Angular + Sentry
+# AngularProject
 
-## Installation
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
 
-https://docs.sentry.io/platforms/javascript/angular/
+## Development server
 
-### Deploying
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-`nvm use`
+## Code scaffolding
 
-`npm install`
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-`npm install -g @sentry/cli`
+## Build
 
-The following command is defined in [package.json](https://github.com/sentry-demos/angular/blob/master/package.json#L12-L13) and will build, create release, upload source maps and deploy:
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-`npm run deploy`
+## Running unit tests
 
-## GIF
-![Alt Text](angular-demo.gif)
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

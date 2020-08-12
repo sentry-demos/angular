@@ -7,13 +7,18 @@ SENTRY_PROJECT=ng-demo
 VERSION=`sentry-cli releases propose-version`
 PREFIX=dist
 
+
 setup_release: create_release associate_commits upload_sourcemaps
+#setup_release: create_release upload_sourcemaps
+
 
 create_release:
 	sentry-cli releases -o $(SENTRY_ORG) new -p $(SENTRY_PROJECT) $(VERSION)
 
+
+#local commits 
 associate_commits:
-	sentry-cli releases -o $(SENTRY_ORG) -p $(SENTRY_PROJECT) set-commits --auto $(VERSION)
+	sentry-cli releases -o $(SENTRY_ORG) -p $(SENTRY_PROJECT) set-commits --local $(VERSION) 
 
 upload_sourcemaps:
 	sentry-cli releases -o $(SENTRY_ORG) -p $(SENTRY_PROJECT) files \
@@ -21,3 +26,4 @@ upload_sourcemaps:
 
 reference_release:
 	sed -i -e "s/release: .*/\release: \"${VERSION}\"/g" src/app/app.module.ts
+#should be dead code by the end of this project
