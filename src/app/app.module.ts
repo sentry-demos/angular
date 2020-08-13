@@ -4,12 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { environment } from './../environments/environment';
 
 import * as Sentry from "@sentry/browser";
 
 Sentry.init({
   dsn: "https://6dd6b79934654822b631951be27ec0e1@o87286.ingest.sentry.io/1190123",
-  release: "8de7d0a80fa38807ce77d4bd196492e3617f8161"
+  release: 'my-project-name@' + environment.releasenumber
   //TODO dynamic release, pass in via environment variable, pass in somehow, not static
 })
 
