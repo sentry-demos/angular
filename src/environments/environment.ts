@@ -6,7 +6,7 @@ import { VERSION } from '@angular/core';
 
 export const environment = {
   production: false,
-  release: "9ee9dfb7ae4bfd9c8a537e4ed40b20b3e5ee9ee9"
+  release: "7fa7289f190244f55a8063eb215025b776200383"
 };
 
 /*
