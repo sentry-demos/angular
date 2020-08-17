@@ -10,7 +10,6 @@ import * as Sentry from "@sentry/browser";
 Sentry.init({
   dsn: "https://6dd6b79934654822b631951be27ec0e1@o87286.ingest.sentry.io/1190123",
   release: environment.release
-  //TODO dynamic release, pass in via environment variable, pass in somehow, not static
 })
 
 export class SentryErrorHandler implements ErrorHandler {
