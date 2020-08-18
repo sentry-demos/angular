@@ -48,3 +48,4 @@ export class AppComponent {
     throw new RangeError('Parameter must be between 1 and 100');
   }
 }
+
