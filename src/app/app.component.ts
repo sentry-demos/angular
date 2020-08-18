@@ -47,6 +47,5 @@ export class AppComponent {
   rangeError() {
     throw new RangeError('Parameter must be between 1 and 100');
   }
-  // ERRORS (end)
-
 }
+
