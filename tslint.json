@@ -147,6 +147,10 @@
     "use-pipe-transform-interface": true
   },
   "rulesDirectory": [
+
     "codelyzer"
+
   ]
+
 }
+
