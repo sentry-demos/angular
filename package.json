@@ -22,13 +22,14 @@
     "@angular/platform-browser-dynamic": "~10.0.6",
     "@angular/router": "~10.0.6",
     "@sentry/browser": "^5.20.1",
+    "@sentry/cli": "^1.55.1",
     "@sentry/webpack-plugin": "^1.12.0",
+    "colors": "^1.1.2",
+    "dotenv": "^5.0.0",
     "rxjs": "~6.5.5",
     "serve": "^11.3.2",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.3",
-    "colors": "^1.1.2",
-    "dotenv": "^5.0.0"
+    "zone.js": "~0.10.3"
   },
   "devDependencies": {
     "@angular-builders/dev-server": "^7.3.1",
