@@ -6,6 +6,7 @@ import * as Sentry from "@sentry/browser";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   color = 'black';
   textValue = '';
@@ -47,6 +48,5 @@ export class AppComponent {
   rangeError() {
     throw new RangeError('Parameter must be between 1 and 100');
   }
-  // ERRORS (end)
-
 }
+
