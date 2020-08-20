@@ -21,4 +21,4 @@ upload_sourcemaps:
 		$(VERSION) upload-sourcemaps --url-prefix "~/" --rewrite --validate $(PREFIX)
 
 create_env:
-	@echo "version=${VERSION}" >> .env
+	@echo "version=${VERSION}" > .env
