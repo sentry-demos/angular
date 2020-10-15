@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { environment } from './../environments/environment.prod';
 
-import * as Sentry from "@sentry/browser";
+import * as Sentry from "@sentry/angular";
 
 Sentry.init({
   dsn: "https://6dd6b79934654822b631951be27ec0e1@o87286.ingest.sentry.io/1190123",
