@@ -20,9 +20,9 @@ note: predeploy runs as part of deploy where create_env is used
 
 note: a .env file must be made in order to store the relative variable value provided by the Sentry CLI 
 
-## Error
+## Error Monitoring
 ![Alt Text](angular-demo.gif)
 
-## Performance
+## Performance Monitoring
 ![Alt Text](performance.gif)
 
