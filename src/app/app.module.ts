@@ -10,7 +10,17 @@ import * as Sentry from "@sentry/angular";
 
 Sentry.init({
   dsn: "https://6dd6b79934654822b631951be27ec0e1@o87286.ingest.sentry.io/1190123",
-  release: environment.release
+  release: environment.release,
+  integrations: [
+    new Integrations.BrowserTracing({
+      tracingOrigins: ["localhost", "http://localhost/5000"],
+      routingInstrumentation: Sentry.routingInstrumentation,
+    }),
+  ],
+
+  // We recommend adjusting this value in production, or using tracesSampler
+  // for finer control
+  tracesSampleRate: 1.0,
 })
 
 export class SentryErrorHandler implements ErrorHandler {
