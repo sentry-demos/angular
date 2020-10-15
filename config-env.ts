@@ -1,4 +1,4 @@
-import { writeFile } from 'fs';
+const fs = require('fs');
 // Configure Angular `environment.ts` file path
 const targetPath = './src/environments/environment.prod.ts';
 
@@ -15,7 +15,7 @@ const envConfigFile = `export const environment = {
 console.log(colors.magenta('The file `environment.prod.ts` will be written with the following content: \n'));
 
 console.log(colors.grey(envConfigFile));
-writeFile(targetPath, envConfigFile, function (err) {
+fs.writeFile(targetPath, envConfigFile, function (err) {
    if (err) {
        throw console.error(err);
    } else {
