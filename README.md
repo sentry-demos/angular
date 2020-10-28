@@ -1,28 +1,36 @@
-# Angular + Sentry
+# Getting Started with Error Monitoring for Angular
 
-## Installation
+## Pre-Installation Directions: Setup and deploy angular app
 
-https://docs.sentry.io/platforms/javascript/angular/
+1. Be sure to have Node, NVM, and git installed.
 
-### Deploying
+2. fork lone this repository with
+```
+git clone https://github.com/ndmanvar/ng-conf-sample-app
+```
+3. Then install with
+```
+nvm use
+npm install
+```
+4. Then build and run server with
+```
+npm deploy
+```
+5. Verify web server is running properly and app can be loaded (go to `http://localhost:3000` in the browser)
 
-`nvm use`
+6. You should be set for the workshop, where you will add Sentry into application to monitor errors.
 
-`npm install`
+1. Fork and clone repo
+2.
+```
+cd repo_name
+nvm use
+npm install
+npm run deploy
+```
 
-`npm install -g @sentry/cli`
 
-The following command is defined in [package.json](https://github.com/sentry-demos/angular/blob/master/package.json#L12-L13) and will build, create release, upload source maps and deploy:
-
-`npm run deploy` 
-
-note: predeploy runs as part of deploy where create_env is used
-
-note: a .env file must be made in order to store the relative variable value provided by the Sentry CLI 
-
-## Error Monitoring
-![Alt Text](angular-demo.gif)
-
-## Performance Monitoring
-![Alt Text](performance.gif)
-
+## Setup Sentry + install Sentry SDK
+1. go to https://sentry.io/signup + 'create your account'. Follow onboarding steps (select angular project)
+2.

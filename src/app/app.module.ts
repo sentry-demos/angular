@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { Router, RouterModule } from "@angular/router";
 import { AppComponent } from './app.component';
 import { environment } from './../environments/environment.prod';
 import { Integrations } from "@sentry/tracing";
@@ -23,22 +24,25 @@ Sentry.init({
   tracesSampleRate: 1.0,
 })
 
-export class SentryErrorHandler implements ErrorHandler {
-  handleError(err:any) : void {
-    Sentry.captureException(err.originalError || err);
-  }
-}
-
 @NgModule({
-  declarations: [
-    AppComponent
+  declarations: [AppComponent],
+  imports: [BrowserModule, FormsModule, HttpClientModule, RouterModule.forRoot([
+          { path: '', component: AppComponent },
+  ])],
+  providers: [
+    {
+      provide: ErrorHandler,
+      useValue: Sentry.createErrorHandler({
+        showDialog: true,
+      }),
+    },
+    {
+      provide: Sentry.TraceService,
+      deps: [Router],
+    }
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule
-  ],
-  providers: [{ provide: ErrorHandler, useClass: SentryErrorHandler } ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+  constructor(trace: Sentry.TraceService) {}
+}
