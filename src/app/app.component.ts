@@ -7,6 +7,11 @@ import * as Sentry from "@sentry/browser";
   styleUrls: ['./app.component.css']
 })
 
+function block(time) {
+  const start = performance.now();
+  while (performance.now() - start < time) {}
+}
+
 export class AppComponent {
   color = 'black';
   textValue = '';
@@ -48,5 +53,8 @@ export class AppComponent {
   rangeError() {
     throw new RangeError('Parameter must be between 1 and 100');
   }
-}
 
+  profilingIssue() {
+    block(500);
+  }
+}

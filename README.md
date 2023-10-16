@@ -26,3 +26,9 @@ note: a .env file must be made in order to store the relative variable value pro
 ## Performance Monitoring
 ![Alt Text](performance.gif)
 
+## Enable Profiling
+In order to enable profiling, please use an extension that allows you to modify the document response headers. An example of an extension like that for Chrome is [modheader](https://modheader.com/).
+
+![policy headers](profiling.png)
+
+
